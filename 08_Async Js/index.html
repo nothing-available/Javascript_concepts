@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async js</title>
+</head>
+<body>
+    <h1>Hello Again</h1>
+
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // setTime is simply ---> itni deer ka mujhe time do phir mai wo kaam karunga dunga sirf ek baar
+
+    // setInterval is simply --> inta time interval do or haar utne interval ke baad wo kaam karta jaunga
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Jalta hai majnu"
+    }
+
+    const saysumit = function(){
+        console.log('Sumit')
+    }
+
+    const changeMe = setTimeout(changeText,2000);
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("stopped")
+    })
+</script>
+</html>
