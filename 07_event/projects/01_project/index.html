@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firstOne</title>
+</head>
+<body>
+    <button>
+        change Color
+    </button>
+</body>
+<script>
+    const btn = document.querySelector("button");
+
+    function random(number){
+        return Math.floor(Math.random() * (number + 1));
+    }
+
+    btn.addEventListener("dblclick",()=>{
+        const randCol = `rgb(${random(255)},${random(255)},${random(255)})`;
+        document.body.style.backgroundColor = randCol;
+    })
+
+    // btn.addEventListener("keydown",()=>{
+    //     const randCol = `rgb(${random(255)},${random(255)},${random(255)})`;
+    //     document.body.style.backgroundColor = randCol;
+    // })
+
+    // btn.addEventListener("click",()=>{
+    //     const randCol = `rgb(${random(255)},${random(255)},${random(255)})`;
+    //     document.body.style.backgroundColor = randCol;
+    // })
+
+    // btn.addEventListener("mouseover",()=>{
+    //     const randCol = `rgb(${random(255)},${random(255)},${random(255)})`;
+    //     document.body.style.backgroundColor = randCol;
+    // })
+
+
+</script>
+</html>

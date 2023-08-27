@@ -1,0 +1,29 @@
+<!-- Event in object example -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>
+        hello
+    </button>
+</body>
+<script>
+    const btn = document.querySelector("button")
+
+function random(num){
+    return Math.floor(Math.random() * (num + 1));
+}
+
+function bgChanger(e){
+    const rndColor = `rgb(${random(255)},${random(255)},${random(255)})`;
+    e.target.style.backgroundColor = rndColor;
+}
+
+btn.addEventListener('click',bgChanger);
+</script>
+</html>
